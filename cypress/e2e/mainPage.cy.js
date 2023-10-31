@@ -5,8 +5,12 @@ const expectedNames = [
 ]
 
 describe('Main page', () => {
-  it('Check one element ', () => {
+  beforeEach(() => {
     cy.visit('https://demoqa.com/');
+  });
+
+  it('Check one element ', () => {
+
     cy.get('div.card:first-child').click();
     cy.url().should('equal', 'https://demoqa.com/elements');
     /*  cy.get('div.main-header')
@@ -16,18 +20,17 @@ describe('Main page', () => {
       .then(($el) => {
         let textEl = $el.text()
         expect(textEl).to.equal('Elements')
-        cy.log(textEl);             
+        cy.log(textEl);
       })
   });
 
   it('Check many elements with JQuery', () => {
-    cy.visit('https://demoqa.com/');
     /* cy.get('div.card')
-      .should('have.length', 6)
-      .then(($els) => {
-        const nameElements = Cypress.$.makeArray($els)
-          .map(($el) => $el.innerText);       
-        expect(nameElements).to.be.deep.equal(expectedNames)*/
+    .should('have.length', 6)
+    .then(($els) => {
+      const nameElements = Cypress.$.makeArray($els)
+        .map(($el) => $el.innerText);       
+      expect(nameElements).to.be.deep.equal(expectedNames)*/
 
     cy.get('div.card')
       .should('have.length', 6)
@@ -38,16 +41,14 @@ describe('Main page', () => {
   })
 
   it('Check many elements with cypress method', () => {
-    cy.visit('https://demoqa.com/');
     cy.get('div.card')
       .each(($el, idx) => {
-        const nameElement = $el.text();       
+        const nameElement = $el.text();
         expect(nameElement).to.be.eql(expectedNames[idx])
       })
   })
 
-  it.only('Check many elements with Lodash', () => {
-    cy.visit('https://demoqa.com/');
+  it('Check many elements with Lodash', () => {
     cy.get('div.card')
       .should('have.length', 6)
       .then(($els) => {

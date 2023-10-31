@@ -10,5 +10,8 @@
   "license": "ISC",
   "devDependencies": {
     "cypress": "^13.3.2"
+  },
+  "dependencies": {
+    "cypress-file-upload": "^5.0.8"
   }
 }
