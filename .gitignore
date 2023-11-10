@@ -42,4 +42,5 @@ cypress/downloads
 cypress/.DS_Store
 
 .vscode/
+
 .vscode/settings.json
