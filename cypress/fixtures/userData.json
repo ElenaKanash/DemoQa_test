@@ -1,9 +1,9 @@
 {
   "firstName" : "Ivan",
   "lastName" : "Ivanov",
-  "userEmail": "Ivanov-test@gmail.com",
+  "userEmail": "test@gmail.com",
   "userAge": 30,
   "userSalary": 1000,
-  "userDepartment": "development"
+  "userDepartment": "IT Department"
   
 }
