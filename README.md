@@ -1,1 +1,1 @@
-##Automation Cypress tests for https://demoqa.com site
+## Automation Cypress tests for ToolsQA site - https://demoqa.com 
