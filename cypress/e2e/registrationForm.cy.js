@@ -2,10 +2,8 @@
 
 describe('Registration form', () => {
 
-  before(() => {
-    cy.viewport(1920, 1080);
-    cy.visit('https://demoqa.com/automation-practice-form');
-    //Cypress.config('defaultCommandTimeout', 10000);
+  before(() => {    
+    cy.visit('/automation-practice-form');    
   });
 
   it('Check Student Registration Form', () => {

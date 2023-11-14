@@ -2,7 +2,7 @@
 
 describe('Tool Tips', () => {
   before(() => {
-    cy.visit('https://demoqa.com/tool-tips')
+    cy.visit('/tool-tips')
   });
 
   it('check tool tip', () => {

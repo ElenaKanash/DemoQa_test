@@ -6,7 +6,7 @@ const expectedNames = [
 
 describe('Main page', () => {
   beforeEach(() => {
-    cy.visit('https://demoqa.com/');
+     //cy.visit('https://demoqa.com/');
   });
 
   it('Check one element ', () => {
