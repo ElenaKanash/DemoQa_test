@@ -12,6 +12,7 @@
     "cypress": "^13.3.2"
   },
   "dependencies": {
-    "cypress-file-upload": "^5.0.8"
+    "cypress-file-upload": "^5.0.8",
+    "cypress-real-events": "^1.11.0"
   }
 }
