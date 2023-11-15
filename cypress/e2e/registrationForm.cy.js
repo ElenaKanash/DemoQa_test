@@ -32,21 +32,19 @@ describe('Registration form', () => {
     cy.get('#currentAddress').type('New Street');
 
     cy.get('#state').click();
-    //cy.get('#react-select-3-option-0').should('contain', 'NCR').click();
-    cy.get('[id^="react-select-3-option-"]').then($els => {
+    cy.get('#react-select-3-option-0').should('contain', 'NCR').click();
+   /*  cy.get('[id^="react-select-3-option-"]').then($els => {
       const state = Cypress.$.makeArray($els).filter($el => $el.innerText ==="NCR");
       return cy.wrap(state)
-    }).click();
+    }).click(); */
 
     cy.get('#city').click();
-    //cy.get('#react-select-4-option-0').should('contain', 'Delhi').click();
+    //cy.get('#react-select-4-option-0').should('contain', 'Delhi').click();  
     cy.get('[id^="react-select-4-option-"]').then($els => {
-      const city = Cypress.$.makeArray($els).filter($el => $el.innerText ==="Delhi");
-      cy.wrap(city)
+      return Cypress.$.makeArray($els).filter($el => $el.innerText ==="Delhi");      
     }).click();
 
     cy.get('#submit').click({ force: true });
-
     cy.contains('Thanks for submitting the form').should('be.visible');
   });
 
