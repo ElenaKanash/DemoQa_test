@@ -1,7 +1,11 @@
-## Automation Cypress tests for ToolsQA site - https://demoqa.com 
+## Automation testing with Cypress ToolsQA site - https://demoqa.com 
 
-Testing different web elements, forms, pop up windowsand widgets;
-Testing different шnteractions with elements;
+Testing different web elements, forms, pop up windows;
+
+Testing different types of widgets;
+
+Testing different types of interactions with elements;
+
 Testing API;
 
 
