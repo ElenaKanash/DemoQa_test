@@ -1,7 +1,7 @@
 /// <reference types="cypress" />
 
 describe('API testing', () => {
-  let token, expire  
+  let token, expires  
   
   it('Authorized', () => {
     cy.request({
@@ -30,12 +30,15 @@ it('GenerateToken', () => {
     expect(response.status).to.be.equal(200);
     console.log(response);
     token = response.body.token;
-    expire = response.body.expire;
+    expires = response.body.expires;
     console.log(token)     
-    console.log(expire) 
+    console.log(expires) 
   })
 });
 
+it('Login to DemoQA', () => {
+  
+});
 
 });
 
